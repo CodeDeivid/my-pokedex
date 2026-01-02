@@ -5,6 +5,7 @@ test.describe('Pokédex', () => {
 
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
+    await expect(page.locator('.pokemon-card').first()).toBeVisible({ timeout: 20000 });
   });
 
   test('Deve carregar a lista de pokemons', async ({ page }) => {
