@@ -16,6 +16,7 @@
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?style=for-the-badge&logo=vercel)](https://vercel.com)
 [![Playwright](https://img.shields.io/badge/Playwright-45ba4b?style=for-the-badge&logo=Playwright&logoColor=white)](https://playwright.dev/)
+[![GitHub Actions](https://img.shields.io/badge/CI-GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/features/actions)
 
 ---
 
@@ -105,11 +106,15 @@ pnpm preview
 
 ---
 
-## ✅ Testes Automatizados (E2E)
+## ✅ Testes Automatizados (E2E) & CI/CD
 
-O projeto conta com cobertura de testes End-to-End utilizando **Playwright**, garantindo que fluxos críticos (carregamento, busca, paginação) funcionem conforme o esperado.
+O projeto adota práticas de **Integração Contínua (CI)**. Além da execução local, configurei um pipeline no **GitHub Actions** que roda automaticamente a suíte de testes do Playwright a cada *Push* na `main` ou abertura de *Pull Request*.
 
-Para rodar os testes no terminal (Headless):
+Isso garante que o sistema esteja sempre estável e impede que falhas (regressões) cheguem à produção.
+
+### Rodando localmente
+
+Para executar os testes no seu terminal (Headless):
 
 ```bash
 pnpm test:e2e
